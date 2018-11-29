@@ -1,0 +1,6 @@
+node_modules
+
+# v1.0 has all the build javascript files
+v1.0
+
+.vscode
