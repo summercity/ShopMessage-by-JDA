@@ -4,3 +4,7 @@ node_modules
 v1.0
 
 .vscode
+*.env
+*.dev
+.DS_Store
+*~
