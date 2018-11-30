@@ -29,6 +29,10 @@ if (!IS_PROD) {
 } else {
   app.use('/v1.0', serveStatic(path.join(__dirname,'/v1.0'), {maxAge:'0', index:false}));
 }
+app.use(serveStatic(path.join(__dirname,'/public'), {
+  maxAge : '1h',
+  index : false
+}));
 
 // configure nunjucks template environment for express
 nunjucks.configure(__dirname + '/templates', {
