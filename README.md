@@ -13,7 +13,7 @@ Instructions
 ------------
 Clone this repository as a starting point
 ```
-$> git clone git@github.com:fanrock/shopmsg-chart-demo.git --depth 1
+$> git clone https://github.com/fanrock/shopmsg-chart-demo.git --depth 1
 ```
 
 Install the dependencies onto your local development environment.
@@ -83,7 +83,7 @@ For example, you can [invoke this](https://shopmsg-chart-demo.herokuapp.com/api/
 ]
 ```
 
-You may choose use any package available in the NPM repository. Though we are already using [Ant Design](https://ant.design/) and you are encouraged to keep your UI looking consistent with the existing code.
+You may choose to use any package available in the NPM repository. Though we are already using [Ant Design](https://ant.design/) and you are encouraged to keep your UI looking consistent with the existing code.
 
 Deliverables
 ------------
