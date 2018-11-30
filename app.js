@@ -6,12 +6,15 @@ const path = require('path');
 const nunjucks = require('nunjucks');
 const _ = require('underscore');
 
+const ReportsApiRouter = require('./source/routers/ReportsApiRouter');
+
 const IS_PROD = "NODE_ENV" in process.env && "production" === process.env.NODE_ENV;
+const config = { isProd:IS_PROD };
 
 const app = express();
 app.set('port', (process.env.PORT || 5000));
 
-if (!IS_PROD) {
+if (!config.isProd) {
   // setup the webpack server
   const webpack = require('webpack');
   const webpackDevMiddleware = require('webpack-dev-middleware');
@@ -37,13 +40,14 @@ app.use(serveStatic(path.join(__dirname,'/public'), {
 // configure nunjucks template environment for express
 nunjucks.configure(__dirname + '/templates', {
   autoescape : false,
-  watch : !IS_PROD
+  watch : !config.isProd
 }).express(app);
 
+app.use(new ReportsApiRouter(config));
 app.get('/', function(req, res) {
   const models = {
-    "isProd" : IS_PROD
-  }
+    ...config
+  };
   res.render('index.html', models);
 });
 

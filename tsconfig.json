@@ -12,7 +12,7 @@
       "version" : true
   },
   "include" : [
-      "shopmessage_platform/js/**"
+      "client/**"
   ],
   "exclude": [
     "node_modules",
