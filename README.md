@@ -31,12 +31,12 @@ You should be able to implement your solution using strict browser-only code in 
 
 Resources
 ---------
-To retrieve the dataset for optins, the server code exposes two JSON endpoints:
+To retrieve the dataset for optins, the server code in this repo exposes two JSON endpoints:
 
 - `/api/reports/optins.json?from={YYYY-MM-DD}&to={YYYY-MM-DD}`
 - `/api/reports/recipients.json?from={YYYY-MM-DD}&to={YYYY-MM-DD}`
 
-For example, you can [invoke this](https://shopmsg-chart-demo.herokuapp.com/api/reports/optins.json?from=2018-10-01&to=2018-11-01) on the live production server right now. The result is a JSON array:
+The result is a JSON array:
 ```
 [
   {
